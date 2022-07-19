@@ -1,0 +1,36 @@
+﻿@using GleamTech.AspNet.Core
+@using GleamTech.FileUltimate.AspNet.UI
+
+<!DOCTYPE html>
+@{
+    var fileManager = new FileManager
+    {
+        Width = 800,
+        Height = 600,
+        Resizable = true
+    };
+
+    var rootFolder = new FileManagerRootFolder
+    {
+        Name = "Root Folder",
+        Location = ViewBag.Path
+    };
+
+    rootFolder.AccessControls.Add(new FileManagerAccessControl
+    {
+        Path = @"\",
+        AllowedPermissions = FileManagerPermissions.Full, 
+        AllowedFileTypes = new FileTypeSet(new[] { "*.txt" })
+    });
+
+    fileManager.RootFolders.Add(rootFolder);
+}
+<html>
+    <head>
+        <title>File Manager</title>
+        @this.RenderHead(fileManager)
+    </head>
+    <body>
+        @this.RenderBody(fileManager)
+    </body>
+</html>

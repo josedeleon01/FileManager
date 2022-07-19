@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ProCodeGuide.Samples.FileUpload/1.0.0": {
+        "runtime": {
+          "ProCodeGuide.Samples.FileUpload.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProCodeGuide.Samples.FileUpload/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
